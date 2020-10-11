@@ -207,12 +207,12 @@ end
 train = "data/ml1m_oc_50_train_ratings.csv"
 test = "data/ml1m_oc_50_test_ratings.csv"
 
-T = 1;
-ratio = 2;
-learning_rate = 0.3;
-decay_rate = 0.97;
-lambda = 1.4;
-r = 200;
+T = 1;  # Every T epoches, learning_rate *= decay_rate
+ratio = 3;  # the sample ratio of negative items to positive items
+learning_rate = 0.3;    # the learning rate
+decay_rate = 0.97;      # the decay rate
+lambda = 1.4;   # the regularization parameter
+r = 200;    # the dimension of latent vectors
 
 filename1 = string("dumper/", "mfsetrank", ".csv")
 
